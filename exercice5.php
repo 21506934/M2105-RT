@@ -17,19 +17,8 @@ function factR($n) {
 }
 
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        
-        <style>
-            td, table {
-                border: 1px solid black;
-            }
-        </style>
-    </head>
-    
-    <body>
+
+<?php include("header.php"); ?>
         
         <h1>Creation d'un tableau</h1>
         <div>
@@ -52,6 +41,4 @@ function factR($n) {
             }
         ?>
         
-    </body>
-
-</html>
+<?php include "footer.php"; ?>

@@ -28,14 +28,9 @@ if (isset($_GET['method']) && isset($_GET['content'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    
-    <body>
-        
+
+<?php include("header.php"); ?>
+
         <h1>Chaines</h1>
         <div>
             <form method="get" action="exercice6.php">
@@ -57,7 +52,6 @@ if (isset($_GET['method']) && isset($_GET['content'])) {
             <?php if(isset($res)) { ?>
             <p>Resultat : <?php echo $res; ?></p>
             <?php } ?>
-        
-    </body>
 
-</html>
+
+<?php include "footer.php"; ?>

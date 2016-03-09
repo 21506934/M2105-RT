@@ -4,23 +4,8 @@ if (isset($_GET['method']) && isset($_GET['content'])) {
     $res = $_GET['method']($_GET['content']);
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
 
-    <style>
-        .form-item {
-            width: 100%;
-        }
-        select {
-            height: 170px;
-        }
-
-    </style>
-</head>
-
-<body>
+<?php include("header.php"); ?>
 
 <h1>Chaines</h1>
 <div>
@@ -51,6 +36,4 @@ if (isset($_GET['method']) && isset($_GET['content'])) {
     <p>Resultat : <?php echo $res; ?></p>
 <?php } ?>
 
-</body>
-
-</html>
+<?php include "footer.php"; ?>
