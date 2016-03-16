@@ -5,8 +5,8 @@ function getHeader($startSession, $title) {
     if($startSession)
         session_start();
     
-    if (file_exists("views/header.php"))
-        include("views/header.php");
+    if (file_exists("../views/header.php"))
+        include("../views/header.php");
     else
         die();
     
