@@ -1,6 +1,6 @@
 <?php
 
-require "functions.php";
+require "../functions.php";
 getHeader(true, "Exercice 5");
 
 session_destroy();
