@@ -8,6 +8,8 @@ include 'QCM.php';
 
 getHeader(true, "Questionnaires");
 
+var_dump($_POST); die();
+
 $index = ((int)$_GET['num']-1);
 
 $qcm = new QCM();

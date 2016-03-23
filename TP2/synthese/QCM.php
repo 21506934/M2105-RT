@@ -49,25 +49,25 @@ class QCM {
         echo "<legend>".$question[0]."</legend>";
         echo "<ul>";
         foreach ($question[1]["reponses"] as $k => $v) {
-            echo "<li><div id='checkbox'><label><input type=".(($question[1]["multiple"])?"'checkbox'":"'radio'")." name='question' id=''>".$k."</label></div></li>";
+            echo "<li><div id='checkbox'><label><input type=".(($question[1]["multiple"])?"'checkbox'":"'radio'")." name='question[]' value='".$k."' id=''>".$k."</label></div></li>";
         }
         echo "</ul>";
         echo "</fieldset>";
-        echo "</form>";
     }
 
 
     public function getButtons($index) {
         $nbQuestions = count($this->questions);
         if($index>0) {
-            echo "<a class='btn btn-primary' href='questions.php?num=".((int)$index)."'>Question précedente</a>";
+            echo "<button class='btn btn-primary' href='questions.php?num=".((int)$index)."'>Question précedente</button>";
         }
         if($index<($nbQuestions-1)) {
-            echo "<a class='btn btn-primary' href='questions.php?num=".((int)$index+2)."'>Question suivante</a>";
+            echo "<button class='btn btn-primary' href='questions.php?num=".((int)$index+2)."'>Question suivante</button>";
         }
         if(($index+1)==$nbQuestions) {
-            echo "<a class='btn btn-primary' href='end.php'>Terminer le formulaire</a>";
+            echo "<button class='btn btn-primary' href='end.php'>Terminer le formulaire</button>";
         }
+        echo "</form>";
     }
 
 }
